@@ -1,110 +1,101 @@
-🚀 Edulearn – Scalable MERN Learning Management System
+# 🚀 Edulearn – Scalable MERN Learning Management System
 
-Edulearn is a full-featured, production-style Learning Management System (LMS) built with the MERN stack.
-It supports learners, instructors, and administrators with role-based access control, secure payments, media handling, and revenue distribution logic.
+**Edulearn** is a **full-featured, production-style Learning Management System (LMS)** built with the **MERN stack**.  
+It supports **learners, instructors, and administrators** with **role-based access control, secure payments, media handling, and automated revenue distribution logic**.
 
-Designed to simulate a real-world EdTech SaaS platform.
+> Designed to simulate a **real-world EdTech SaaS platform**.
 
-🏗 System Architecture
-🧩 Architecture Overview
+---
 
-Frontend → React SPA (Vite)
+# 🏗 System Architecture
 
-Backend → RESTful API (Express 5)
+## 🧩 Architecture Overview
 
-Database → MongoDB (Mongoose ODM)
+- **Frontend** → React SPA (Vite)
+- **Backend** → RESTful API (Express 5)
+- **Database** → MongoDB (Mongoose ODM)
+- **Authentication** → JWT + Refresh Tokens (**HTTP-only cookies**)
+- **Media Storage** → Cloudinary
+- **Revenue Engine** → Automated **80/20 revenue split logic**
 
-Authentication → JWT + Refresh Tokens (HTTP-only cookies)
+---
 
-Media Storage → Cloudinary
+## 🔐 Role-Based Access Control
 
-Revenue Engine → Automated 80/20 split logic
+- **Learner**
+- **Instructor**
+- **Admin**
 
-🔐 Role-Based Access Control
+Protected routes enforced via **middleware + token validation**.
 
-Learner
+---
 
-Instructor
+# ✨ Core Features
 
-Admin
+## 👨‍🎓 Learner
 
-Protected routes enforced via middleware and token validation.
+- Browse & filter courses  
+- Secure enrollment flow  
+- Video course player with **progress tracking**  
+- Personal dashboard  
+- Purchase history tracking  
+- *(Planned)* Certificate generation  
 
-✨ Core Features
-👨‍🎓 Learner
+---
 
-Browse & filter courses
+## 👨‍🏫 Instructor
 
-Secure enrollment flow
+- Create & manage courses  
+- Upload videos, PDFs, images, MCQs  
+- Earnings dashboard with **visual analytics**  
+- Student enrollment management  
+- Transaction tracking  
 
-Video course player with progress tracking
+---
 
-Personal dashboard
+## 👮 Admin
 
-Purchase history tracking
+- Platform-wide analytics  
+- User management  
+- Revenue monitoring  
+- Automatic **80/20 revenue split enforcement**  
 
-(Planned) Certificate generation
+---
 
-👨‍🏫 Instructor
+# 💰 Revenue Model
 
-Create & manage courses
+- **Instructor → 80%**
+- **Platform → 20%**
 
-Upload videos, PDFs, images, MCQs
+Revenue is **calculated and distributed automatically** upon enrollment.
 
-Earnings dashboard with visual analytics
+---
 
-Student enrollment management
+# 🛠 Tech Stack
 
-Transaction tracking
+## Frontend
 
-👮 Admin
+- **React 19**
+- **Vite**
+- **Tailwind CSS 4**
+- **React Router 7**
+- **Recharts**
+- **Lucide Icons**
 
-Platform-wide analytics
+## Backend
 
-User management
+- **Node.js**
+- **Express 5**
+- **MongoDB + Mongoose**
+- **JWT Authentication**
+- **Multer** (file uploads)
+- **Cloudinary** (media storage)
 
-Revenue monitoring
+---
 
-Automatic 80/20 revenue split enforcement
+# 📂 Project Structure
 
-💰 Revenue Model
-
-Instructor → 80%
-
-Platform → 20%
-
-Revenue is calculated and distributed automatically upon enrollment.
-
-🛠 Tech Stack
-Frontend
-
-React 19
-
-Vite
-
-Tailwind CSS 4
-
-React Router 7
-
-Recharts
-
-Lucide Icons
-
-Backend
-
-Node.js
-
-Express 5
-
-MongoDB + Mongoose
-
-JWT Authentication
-
-Multer (file uploads)
-
-Cloudinary (media storage)
-
-📂 Project Structure
+```bash
 learning-management-system/
 │
 ├── backend/
@@ -121,25 +112,41 @@ learning-management-system/
     ├── context/
     ├── hooks/
     └── main.jsx
-⚙️ Getting Started
-Prerequisites
+```
 
-Node.js (v18+)
+---
 
-MongoDB (Local or Atlas)
+# ⚙️ Getting Started
 
-Cloudinary account
+## Prerequisites
 
-🔹 Installation
-1️⃣ Clone the Repository
+- **Node.js (v18+)**
+- **MongoDB** (Local or Atlas)
+- **Cloudinary account**
+
+---
+
+## 🔹 Installation
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/your-username/learning-management-system.git
 cd learning-management-system
-2️⃣ Backend Setup
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```bash
 cd backend
 npm install
+```
 
-Create .env file:
+Create a `.env` file:
 
+```env
 PORT=5000
 MONGODB_URL=your_mongodb_url
 CLIENT_URL=http://localhost:4000
@@ -148,30 +155,42 @@ REFRESH_TOKEN_SECRET=your_secret
 CLOUDINARY_CLOUD_NAME=your_name
 CLOUDINARY_API_KEY=your_key
 CLOUDINARY_API_SECRET=your_secret
+```
 
 Run backend:
 
+```bash
 npm run dev
-3️⃣ Frontend Setup
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```bash
 cd ../frontend
 npm install
 npm run dev
+```
 
 Frontend runs at:
 
+```
 http://localhost:4000
-🔒 Security Highlights
+```
 
-HTTP-only cookie storage for refresh tokens
+---
 
-Access token expiration strategy
+# 🔒 Security Highlights
 
-Role-based middleware
+- **HTTP-only cookie storage** for refresh tokens  
+- **Access token expiration strategy**  
+- **Role-based middleware protection**  
+- **Environment variable protection**  
+- **Cloud-based media storage**
 
-Environment variable protection
+---
 
-Cloud-based media storage
+# 📄 License
 
-📄 License
-
-ISC License
+**ISC License**
